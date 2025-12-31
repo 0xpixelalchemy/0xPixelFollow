@@ -1,5 +1,11 @@
-﻿{
-  "title": "0xPixelFollow",
-  "subtitle": "Welcome to my site!",
-  "image": "https://i.ytimg.com/vi/1AzkGpeUQZI/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCQSAf29BQidDLoQw_dqe0N3yR4lQ?text=0xPixelFollow"
+﻿import data from '../index.json'; // импортируем JSON
+
+export default function Home() {
+  return (
+    <div style={{ textAlign: 'center', marginTop: '50px' }}>
+      <h1>{data.title}</h1>
+      <h2>{data.subtitle}</h2>
+      <img src={data.image} alt={data.title} style={{ maxWidth: '80%', height: 'auto' }} />
+    </div>
+  );
 }
